@@ -34,9 +34,27 @@ To write a C Program to print 'WELCOME' using malloc() and free().
 6.	Stop the program.
 
 ## PROGRAM
+```
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+int main() {
+    char *str;
+    str = (char *)malloc(8 * sizeof(char)); 
+    if (str == NULL) {
+        printf("Memory not allocated.\n");
+        return 1;
+    }
+    strcpy(str, "WELCOME");
+    printf("%s\n", str);
+    free(str);
+    return 0;
+}
 
+```
 ## OUTPUT
 
+![image](https://github.com/user-attachments/assets/4a01dbb9-630f-4d94-b60c-f177a4e1baf7)
 
 
 ## RESULT
@@ -61,9 +79,28 @@ To write a C Program to store the student information and display it using struc
 
 ## PROGRAM
 
-
+```
+#include<stdio.h>
+struct student{
+    char name[20];
+    int roll_no;
+    float marks;
+};
+int main()
+{
+    struct student s1;
+    scanf("%s",s1.name);
+    scanf("%d",&s1.roll_no);
+    scanf("%f",&s1.marks);
+    printf("Displaying Information:\n");
+    printf("Name: %s\n",s1.name);
+    printf("Roll number: %d\n",s1.roll_no);
+    printf("Marks: %.1f",s1.marks);
+}
+```
 ## OUTPUT
 
+![image](https://github.com/user-attachments/assets/8ef918b5-98a7-46f9-8265-216f04fc678b)
 
 ## RESULT
 
